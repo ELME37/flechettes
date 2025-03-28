@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de fléchettes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/icon.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <h1>Jeu de Fléchettes</h1>
+
+        <div id="setup">
+            <label>Nombre de joueurs :</label>
+            <input type="number" id="numPlayers" min="1" max="4" value="2">
+            
+            <label>Score de départ :</label>
+            <input type="number" id="startScore" value="301">
+            
+            <button id="generatePlayers">Valider</button>
+            <div id="playerNames"></div>
+            <button id="startGame" style="display:none;">Démarrer la Partie</button>
+        </div>
+
+        <div id="gameArea" style="display: none;">
+            <h2 id="currentPlayer"></h2>
+            <div id="scoreBoard"></div>
+
+            <div id="scoreInput">
+                <label>Fléchette 1 :</label>
+                <input type="number" id="dart1" min="0" max="60">
+                <label>Fléchette 2 :</label>
+                <input type="number" id="dart2" min="0" max="60">
+                <label>Fléchette 3 :</label>
+                <input type="number" id="dart3" min="0" max="60">
+                <button id="submitScores">Valider le tour</button>
+            </div>
+
+            <button id="resetScores">Réinitialiser les scores</button>
+            <button id="newGame">Nouvelle partie</button>
+        </div>
+
+        <div id="winnerMessage"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
